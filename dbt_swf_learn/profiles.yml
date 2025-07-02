@@ -1,0 +1,29 @@
+dbt_swf_learn: # this needs to match the profile: in your dbt_project.yml file
+  target: dev # The default for any dbt commands
+  outputs:
+    dev:
+      type: snowflake
+      account: TBSAUUC-FW65416
+      user: "YAKOVLEVYUS"
+      password: "sdlWWJsnowf#01"
+      role: "ACCOUNTADMIN"
+      database: "LEARN_DBT"
+      warehouse: "COMPUTE_WH"
+      schema: "PUBLIC"
+      threads: 4
+      client_session_keep_alive: false
+      timeout_seconds: 300
+
+    # You won't use this, but an example of using a different target
+    production:
+      type: snowflake
+      account: TBSAUUC-FW65416
+      user: "YAKOVLEVYUS"
+      password: "sdlWWWJsnowf#01"
+      role: "ACCOUNTADMIN"
+      database: "LEARN_DBT"
+      warehouse: "COMPUTE_WH"
+      schema: "PUBLIC"
+      threads: 4
+      client_session_keep_alive: false
+      timeout_seconds: 300
